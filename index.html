@@ -773,14 +773,14 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         var navMap = {
-          "#homesec": "#hero",
-          "#aboutussec": "#about-sec",
-          "#servicessec": "#categorySlider1",
+          "#homesec": "#homesec, #hero",
+          "#aboutussec": "#aboutussec, #about-sec",
+          "#servicessec": "#servicessec, #categorySlider1",
           "#contactussec": "#contactussec",
         };
         document
           .querySelectorAll(
-            '.th-header a[href^="#"], .th-menu-wrapper a[href^="#"]',
+            '.th-header a[href^="#"], .th-menu-wrapper a[href^="#"], .hero-style1 a[href^="#"]',
           )
           .forEach(function (link) {
             link.addEventListener("click", function (e) {
@@ -808,7 +808,7 @@
           });
       });
     </script>
-    <div class="th-hero-wrapper hero-1" id="hero">
+    <div class="th-hero-wrapper hero-1" id="homesec">
       <div
         class="swiper th-slider hero-slider-1"
         id="heroSlide1"
@@ -858,10 +858,10 @@
                         data-ani="slideinup"
                         data-ani-delay="0.8s"
                       >
-                        <a href="contact.html" class="th-btn style7 th-icon"
+                        <a href="#aboutussec" class="th-btn style7 th-icon"
                           >Discover More
                           <i class="fa-light fa-arrow-right-long"></i> </a
-                        ><a href="service.html" class="th-btn style2 th-icon"
+                        ><a href="#servicessec" class="th-btn style2 th-icon"
                           >Our Services
                           <i class="fa-light fa-arrow-right-long"></i
                         ></a>
@@ -915,10 +915,10 @@
                         data-ani="slideinup"
                         data-ani-delay="0.8s"
                       >
-                        <a href="contact.html" class="th-btn style7 th-icon"
+                        <a href="#aboutussec" class="th-btn style7 th-icon"
                           >Discover More
                           <i class="fa-light fa-arrow-right-long"></i> </a
-                        ><a href="service.html" class="th-btn style2 th-icon"
+                        ><a href="#servicessec" class="th-btn style2 th-icon"
                           >Our Services
                           <i class="fa-light fa-arrow-right-long"></i
                         ></a>
@@ -972,10 +972,10 @@
                         data-ani="slideinup"
                         data-ani-delay="0.8s"
                       >
-                        <a href="contact.html" class="th-btn style7 th-icon"
+                        <a href="#aboutussec" class="th-btn style7 th-icon"
                           >Discover More
                           <i class="fa-light fa-arrow-right-long"></i> </a
-                        ><a href="service.html" class="th-btn style2 th-icon"
+                        ><a href="#servicessec" class="th-btn style2 th-icon"
                           >Our Services
                           <i class="fa-light fa-arrow-right-long"></i
                         ></a>
@@ -1008,7 +1008,7 @@
     </div>
     <div
       class="about-area position-relative overflow-hidden space"
-      id="about-sec"
+      id="aboutussec"
     >
       <div class="container">
         <div class="row">
@@ -1131,6 +1131,7 @@
     </section>
     <section
       class="category-area bg-top-center space overflow-hidden"
+      id="servicessec"
       data-bg-src="assets/img/bg/category_bg_1.png"
     >
       <div class="container th-container">
@@ -1962,7 +1963,7 @@
         <span class="contact-tooltip">Email</span>
       </a>
       <a
-        href="tel:+960778208"
+        href="tel:+9607782081"
         class="floating-contact-btn btn-call"
         aria-label="Call"
       >

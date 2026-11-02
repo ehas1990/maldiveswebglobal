@@ -216,25 +216,31 @@
       var customError = '';
 
       try {
-        // 1. Attempt PHP backend (for PHP/Apache/cPanel servers)
-        var phpResponse = await fetch('mail.php', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
-          body: JSON.stringify(payload)
-        }).catch(function () { return null; });
+        var isStaticHost = window.location.hostname.indexOf('vercel.app') !== -1 ||
+                           window.location.hostname.indexOf('github.io') !== -1 ||
+                           window.location.protocol === 'file:';
 
-        if (phpResponse && phpResponse.ok) {
-          var phpData = await phpResponse.json().catch(function () { return null; });
-          if (phpData && (phpData.success === true || phpData.success === 'true')) {
-            isSuccess = true;
-            statusMessage = phpData.message || ('Thank you! Your message has been sent successfully to ' + RECIPIENT_EMAIL + '.');
+        // 1. Attempt PHP backend (for PHP/Apache/cPanel servers)
+        if (!isStaticHost) {
+          var phpResponse = await fetch('mail.php', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify(payload)
+          }).catch(function () { return null; });
+
+          if (phpResponse && phpResponse.ok) {
+            var phpData = await phpResponse.json().catch(function () { return null; });
+            if (phpData && (phpData.success === true || phpData.success === 'true')) {
+              isSuccess = true;
+              statusMessage = phpData.message || ('Thank you! Your message has been sent successfully to ' + RECIPIENT_EMAIL + '.');
+            }
           }
         }
 
-        // 2. Fallback to FormSubmit service (for static hosting like GitHub Pages)
+        // 2. Fallback to FormSubmit service (for static hosting like Vercel / GitHub Pages)
         if (!isSuccess) {
           var formSubmitResponse = await fetch('https://formsubmit.co/ajax/' + RECIPIENT_EMAIL, {
             method: 'POST',
