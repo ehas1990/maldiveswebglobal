@@ -307,6 +307,11 @@
         box-shadow: 0 8px 22px rgba(11, 20, 34, 0.25) !important;
         transform: translateY(-1px) !important;
       }
+      @media (max-width: 767.98px) {
+        .header-layout1 .header-button .th-btn {
+          display: none !important;
+        }
+      }
       /* Scoped Mobile Menu Drawer Styles */
       .th-menu-wrapper .mobile-logo {
         background-color: var(--title-color, #0b1422) !important;
@@ -467,7 +472,9 @@
         display: block;
       }
       @keyframes wgSpin {
-        to { transform: rotate(360deg); }
+        to {
+          transform: rotate(360deg);
+        }
       }
 
       /* Copyright Section */
@@ -493,6 +500,24 @@
         }
         .wg-copyright-text {
           font-size: 13px;
+        }
+      }
+
+      /* Contact Section Background & Equal Vertical Spacing */
+      .contact-area3 {
+        background-color: #14385c !important;
+        position: relative;
+        padding-top: var(--section-space, 120px) !important;
+        padding-bottom: var(--section-space, 120px) !important;
+      }
+      .contact-area3 .contact8-titlebox .sec-title,
+      .contact-area3 .contact8-titlebox .sub-title {
+        color: #ffffff !important;
+      }
+      @media (max-width: 991px) {
+        .contact-area3 {
+          padding-top: var(--section-space-mobile, 80px) !important;
+          padding-bottom: var(--section-space-mobile, 80px) !important;
         }
       }
     </style>
@@ -1786,16 +1811,19 @@
       </div>
     </div>
     <div
-      class="contact-area3 bg-top-center space-top overflow-hidden"
+      class="contact-area3 bg-top-center space overflow-hidden"
       id="contactussec"
+      style="background-color: #14385c"
       data-bg-src="assets/img/bg/map.png"
     >
       <div class="container">
         <div class="row gy-4 justify-content-between">
           <div class="col-lg-6">
             <div class="title-area contact8-titlebox">
-              <span class="sub-title text-anime-style-2">Address </span>
-              <h6 class="sec-title text-anime-style-3">
+              <span class="sub-title text-white text-anime-style-2"
+                >Address
+              </span>
+              <h6 class="sec-title text-white text-anime-style-3">
                 WebGlobal Private Limited<br />
                 Ma. Direy,1st Floor,<br />Dhilbahaaru Magu, K.Male',Maldives
               </h6>
@@ -1897,10 +1925,11 @@
       </div>
     </div>
     <!-- Copyright Section -->
-    <div class="wg-copyright-area">
+    <div class="wg-copyright-area mt-5">
       <div class="container text-center">
         <p class="wg-copyright-text">
-          Copyright &copy; WebGlobal Private Limited <span id="currentYear">2026</span>. All Right Reserved.
+          Copyright &copy; WebGlobal Private Limited
+          <span id="currentYear">2026</span>. All Right Reserved.
         </p>
       </div>
     </div>
