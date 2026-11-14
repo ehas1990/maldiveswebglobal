@@ -338,14 +338,14 @@
         padding: 14px 20px !important;
         border-radius: 100px !important;
       }
-/* ==========================================================================
+      /* ==========================================================================
          Scoped "What We Offer" Section Styles (Glinto "HOW WE WORK" Inspired)
          ========================================================================== */
       .glinto-wwo-section {
         background-color: #f6f9fc !important;
         position: relative !important;
         overflow: visible !important;
-        padding: 0 !important;
+        padding: 30px 0px !important;
       }
 
       .glinto-wwo-runway {
@@ -573,7 +573,7 @@
         text-stroke: 1.2px #318ce7;
         font-size: 19px;
         font-weight: 800;
-        line-height: 1;
+
         letter-spacing: -0.5px;
         border-radius: 0 !important;
         padding: 0 !important;
@@ -590,7 +590,7 @@
       }
 
       .glinto-card-badge {
-        font-size: 11px;
+        font-size: 30px;
         font-weight: 700;
         color: #318ce7;
         background-color: #f0f7ff;
@@ -808,6 +808,360 @@
         }
       }
 
+      /* ==========================================================================
+         Scoped Modern 80% Width Two-Column Address & Contact Form
+         ========================================================================== */
+      .contact-area3 {
+        background-color: #14385c !important;
+        position: relative;
+        padding-top: var(--section-space, 100px) !important;
+        padding-bottom: var(--section-space, 100px) !important;
+      }
+      @media (max-width: 991px) {
+        .contact-area3 {
+          padding-top: var(--section-space-mobile, 70px) !important;
+          padding-bottom: var(--section-space-mobile, 70px) !important;
+        }
+      }
+
+      .contact-two-col-container {
+        width: 80% !important;
+        max-width: 1240px;
+        margin: 0 auto !important;
+        background-color: #ffffff !important;
+        border-radius: 28px !important;
+        box-shadow: 0 25px 70px rgba(0, 0, 0, 0.28) !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        padding: 55px 50px !important;
+        box-sizing: border-box !important;
+        position: relative !important;
+        z-index: 2 !important;
+      }
+
+      @media (max-width: 1199px) {
+        .contact-two-col-container {
+          width: 86% !important;
+          padding: 45px 40px !important;
+        }
+      }
+      @media (max-width: 991px) {
+        .contact-two-col-container {
+          width: 92% !important;
+          border-radius: 24px !important;
+          padding: 40px 30px !important;
+        }
+      }
+      @media (max-width: 575px) {
+        .contact-two-col-container {
+          width: 94% !important;
+          border-radius: 20px !important;
+          padding: 30px 20px !important;
+        }
+      }
+
+      .contact-two-col-row {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: stretch !important;
+        gap: 50px !important;
+        width: 100% !important;
+        margin: 0 !important;
+      }
+
+      /* Left Column – Address (40%) */
+      .contact-col-address {
+        width: calc(40% - 25px) !important;
+        flex: 0 0 calc(40% - 25px) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        box-sizing: border-box !important;
+        padding-right: 25px !important;
+        border-right: 1px solid #eef2f6 !important;
+      }
+
+      .contact-address-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        font-weight: 700;
+        color: #318ce7;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 10px;
+        font-family: var(--title-font, "Plus Jakarta Sans", sans-serif);
+      }
+
+      .contact-address-title {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 1.25;
+        color: #0b1422;
+        margin-bottom: 12px;
+        font-family: var(--title-font, "Plus Jakarta Sans", sans-serif);
+      }
+
+      .contact-address-desc {
+        font-size: 14.5px;
+        line-height: 1.65;
+        color: #6e7070;
+        margin-bottom: 30px;
+      }
+
+      .contact-info-list {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+      }
+
+      .contact-info-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .contact-info-icon-box {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        border-radius: 12px;
+        background-color: #318ce7;
+        box-shadow: 0 4px 14px rgba(49, 140, 231, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+      }
+
+      .contact-info-icon-box img {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+        filter: brightness(0) invert(1);
+      }
+
+      .contact-info-item:hover .contact-info-icon-box {
+        background-color: #0b1422;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(11, 20, 34, 0.25);
+      }
+      .contact-info-item:hover .contact-info-icon-box img {
+        filter: brightness(0) invert(1);
+      }
+
+      .contact-info-content {
+        flex: 1;
+      }
+
+      .contact-info-label {
+        display: block;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #8898aa;
+        font-weight: 600;
+        margin-bottom: 4px;
+        font-family: var(--title-font, "Plus Jakarta Sans", sans-serif);
+      }
+
+      .contact-company-name {
+        font-size: 17px;
+        font-weight: 700;
+        color: #0b1422;
+        margin-bottom: 4px;
+        font-family: var(--title-font, "Plus Jakarta Sans", sans-serif);
+      }
+
+      .contact-company-address {
+        font-size: 14px;
+        line-height: 1.55;
+        color: #4a5568;
+        margin: 0;
+      }
+
+      .contact-info-link {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0b1422;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .contact-info-link:hover {
+        color: #318ce7;
+      }
+
+      /* Right Column – Contact Form (60%) */
+      .contact-col-form {
+        width: calc(60% - 25px) !important;
+        flex: 0 0 calc(60% - 25px) !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+      }
+
+      .contact-form-subtitle {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        font-weight: 700;
+        color: #318ce7;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 8px;
+        font-family: var(--title-font, "Plus Jakarta Sans", sans-serif);
+      }
+
+      .contact-form-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0b1422;
+        margin-bottom: 24px;
+        line-height: 1.3;
+        font-family: var(--title-font, "Plus Jakarta Sans", sans-serif);
+      }
+
+      .contact-form2 .form-group {
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      .contact-form2 .form-control {
+        height: 54px;
+        padding: 0 46px 0 20px;
+        font-size: 14.5px;
+        color: #0b1422;
+        background-color: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        transition:
+          border-color 0.3s ease,
+          box-shadow 0.3s ease,
+          background-color 0.3s ease;
+      }
+
+      .contact-form2 .form-control:focus {
+        background-color: #ffffff;
+        border-color: #318ce7;
+        box-shadow: 0 0 0 3px rgba(49, 140, 231, 0.15);
+        outline: none;
+      }
+
+      .contact-form2 .form-control::placeholder {
+        color: #94a3b8;
+        opacity: 1;
+      }
+
+      .contact-form2 textarea.form-control {
+        min-height: 120px;
+        height: auto;
+        padding: 16px 46px 16px 20px;
+        line-height: 1.6;
+        resize: vertical;
+      }
+
+      .contact-form2 .form-group > img,
+      .contact-form2 .form-group > i {
+        position: absolute;
+        right: calc(var(--bs-gutter-x, 16px) / 2 + 18px);
+        top: 27px;
+        transform: translateY(-50%);
+        width: 17px;
+        height: 17px;
+        object-fit: contain;
+        pointer-events: none;
+        opacity: 0.55;
+        transition: opacity 0.3s ease;
+        z-index: 2;
+      }
+
+      .contact-form2 .form-group textarea ~ img,
+      .contact-form2 .form-group textarea ~ i {
+        top: 24px;
+        transform: none;
+      }
+
+      .contact-form2 .form-control:focus ~ img,
+      .contact-form2 .form-control:focus ~ i {
+        opacity: 1;
+      }
+
+      .contact-submit-btn {
+        width: 100%;
+        background-color: #318ce7 !important;
+        color: #ffffff !important;
+        border: none !important;
+        border-radius: 12px !important;
+        padding: 16px 30px !important;
+        font-size: 15px !important;
+        font-weight: 700 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        cursor: pointer !important;
+        transition: all 0.3s ease !important;
+        box-shadow: 0 6px 20px rgba(49, 140, 231, 0.3) !important;
+      }
+
+      .contact-submit-btn:hover {
+        background-color: #0b1422 !important;
+        color: #ffffff !important;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(11, 20, 34, 0.25) !important;
+      }
+
+      .contact-submit-btn img {
+        width: 17px;
+        height: 17px;
+        object-fit: contain;
+        filter: brightness(0) invert(1);
+      }
+
+      /* Tablet & Mobile Responsive */
+      @media (max-width: 991px) {
+        .contact-two-col-row {
+          flex-direction: column !important;
+          gap: 35px !important;
+        }
+        .contact-col-address {
+          width: 100% !important;
+          flex: 0 0 100% !important;
+          padding-right: 0 !important;
+          border-right: none !important;
+          border-bottom: 1px solid #eef2f6 !important;
+          padding-bottom: 35px !important;
+        }
+        .contact-col-form {
+          width: 100% !important;
+          flex: 0 0 100% !important;
+        }
+      }
+
+      @media (max-width: 575px) {
+        .contact-address-title {
+          font-size: 24px;
+        }
+        .contact-form-title {
+          font-size: 22px;
+        }
+        .contact-info-list {
+          gap: 18px;
+        }
+        .contact-info-icon-box {
+          width: 42px;
+          height: 42px;
+          min-width: 42px;
+        }
+        .contact-info-icon-box img {
+          width: 18px;
+          height: 18px;
+        }
+      }
+
       /* Copyright Section */
       .wg-copyright-area {
         background-color: #318ce7;
@@ -831,24 +1185,6 @@
         }
         .wg-copyright-text {
           font-size: 13px;
-        }
-      }
-
-      /* Contact Section Background & Equal Vertical Spacing */
-      .contact-area3 {
-        background-color: #14385c !important;
-        position: relative;
-        padding-top: var(--section-space, 120px) !important;
-        padding-bottom: var(--section-space, 120px) !important;
-      }
-      .contact-area3 .contact8-titlebox .sec-title,
-      .contact-area3 .contact8-titlebox .sub-title {
-        color: #ffffff !important;
-      }
-      @media (max-width: 991px) {
-        .contact-area3 {
-          padding-top: var(--section-space-mobile, 80px) !important;
-          padding-bottom: var(--section-space-mobile, 80px) !important;
         }
       }
     </style>
@@ -1818,7 +2154,11 @@
                 var cRect = card.getBoundingClientRect();
                 var cCenterY = cRect.top + cRect.height / 2;
                 var diff = Math.abs(cCenterY - vpCenterY);
-                if (diff < minDiff && cRect.top < window.innerHeight && cRect.bottom > 0) {
+                if (
+                  diff < minDiff &&
+                  cRect.top < window.innerHeight &&
+                  cRect.bottom > 0
+                ) {
                   minDiff = diff;
                   closestCard = card;
                 }
@@ -1906,7 +2246,9 @@
             function onMobileScroll() {
               updateCenterCard(false);
             }
-            window.addEventListener("scroll", onMobileScroll, { passive: true });
+            window.addEventListener("scroll", onMobileScroll, {
+              passive: true,
+            });
             updateCenterCard(false);
 
             return function () {
@@ -2472,110 +2814,154 @@
       style="background-color: #14385c"
       data-bg-src="assets/img/bg/map.png"
     >
-      <div class="container">
-        <div class="row gy-4 justify-content-between">
-          <div class="col-lg-6">
-            <div class="title-area contact8-titlebox">
-              <span class="sub-title text-white text-anime-style-2"
-                >Address
-              </span>
-              <h6 class="sec-title text-white text-anime-style-3">
-                WebGlobal Private Limited<br />
-                Ma. Direy,1st Floor,<br />Dhilbahaaru Magu, K.Male',Maldives
-              </h6>
+      <div class="contact-two-col-container">
+        <div class="contact-two-col-row">
+          <!-- Left Column – Address (40%) -->
+          <div class="contact-col-address">
+            <div>
+              <div class="contact-address-badge">
+                <span>Address</span>
+              </div>
+              <h3 class="contact-address-title">Our Office Address</h3>
+              <p class="contact-address-desc">
+                Transforming ideas into high-performance enterprise platforms
+                and modern digital solutions.
+              </p>
+            </div>
+
+            <div class="contact-info-list">
+              <div class="contact-info-item">
+                <div class="contact-info-icon-box">
+                  <img src="assets/img/icon/location-dot3.svg" alt="Location" />
+                </div>
+                <div class="contact-info-content">
+                  <span class="contact-info-label">Company Location</span>
+                  <h5 class="contact-company-name">
+                    WebGlobal Private Limited
+                  </h5>
+                  <p class="contact-company-address">
+                    Ma. Direy, 1st Floor,<br />
+                    Dhilbahaaru Magu, K.Male', Maldives
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon-box">
+                  <img src="assets/img/icon/call.svg" alt="Phone" />
+                </div>
+                <div class="contact-info-content">
+                  <span class="contact-info-label">Phone Support</span>
+                  <a href="tel:+9607782081" class="contact-info-link"
+                    >+960 778 2081</a
+                  >
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon-box">
+                  <img src="assets/img/icon/mail.svg" alt="Email" />
+                </div>
+                <div class="contact-info-content">
+                  <span class="contact-info-label">Direct Email</span>
+                  <a href="mailto:sales.mv@webgbl.com" class="contact-info-link"
+                    >sales.mv@webgbl.com</a
+                  >
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="contact8-form-area ms-xl-5">
-              <form
-                action="mail.php"
-                method="POST"
-                class="contact-form2"
-                id="contactForm"
-                novalidate
-              >
-                <div class="row">
-                  <div class="form-group col-12">
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="name"
-                      id="name3"
-                      placeholder="First Name"
-                    />
-                    <img src="assets/img/icon/user.svg" alt="" />
-                    <span class="invalid-feedback"></span>
-                  </div>
-                  <div class="form-group col-12">
-                    <input
-                      type="email"
-                      class="form-control"
-                      name="email"
-                      id="email"
-                      placeholder="Your Mail"
-                    />
-                    <img src="assets/img/icon/mail.svg" alt="" />
-                    <span class="invalid-feedback"></span>
-                  </div>
-                  <div class="form-group col-12">
-                    <input
-                      type="tel"
-                      class="form-control"
-                      name="number"
-                      id="number"
-                      placeholder="Phone Number"
-                    />
-                    <img src="assets/img/icon/call.svg" alt="" />
-                    <span class="invalid-feedback"></span>
-                  </div>
-                  <div class="form-group col-12">
-                    <input
-                      type="text"
-                      name="subject"
-                      id="subject"
-                      class="form-control"
-                      placeholder="Your Subject"
-                    />
-                    <img src="assets/img/icon/chat.svg" alt="" />
-                    <span class="invalid-feedback"></span>
-                  </div>
-                  <div class="form-group col-12">
-                    <textarea
-                      name="message"
-                      id="message"
-                      cols="30"
-                      rows="3"
-                      class="form-control"
-                      placeholder="Your Message"
-                    ></textarea>
-                    <img src="assets/img/icon/chat.svg" alt="" />
-                    <span class="invalid-feedback"></span>
-                  </div>
+
+          <!-- Right Column – Contact Form (60%) -->
+          <div class="contact-col-form">
+            <div class="contact-form-header">
+              <span class="contact-form-subtitle">Contact Us</span>
+              <h3 class="contact-form-title">Send Us a Message</h3>
+            </div>
+
+            <form
+              action="mail.php"
+              method="POST"
+              class="contact-form2"
+              id="contactForm"
+              novalidate
+            >
+              <div class="row gx-3">
+                <!-- Row 1: Name | Phone Number -->
+                <div class="form-group col-sm-6 col-12">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="name"
+                    id="name3"
+                    placeholder="Name"
+                  />
+                  <img src="assets/img/icon/user.svg" alt="" />
+                  <span class="invalid-feedback"></span>
                 </div>
-                <p class="form-messages mb-0 mt-3"></p>
-              </form>
-              <div class="form-btn-wrapp">
-                <div class="form-btn">
+                <div class="form-group col-sm-6 col-12">
+                  <input
+                    type="tel"
+                    class="form-control"
+                    name="number"
+                    id="number"
+                    placeholder="Phone Number"
+                  />
+                  <img src="assets/img/icon/call.svg" alt="" />
+                  <span class="invalid-feedback"></span>
+                </div>
+
+                <!-- Row 2: Email Address | Subject -->
+                <div class="form-group col-sm-6 col-12">
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    id="email"
+                    placeholder="Email Address"
+                  />
+                  <img src="assets/img/icon/mail.svg" alt="" />
+                  <span class="invalid-feedback"></span>
+                </div>
+                <div class="form-group col-sm-6 col-12">
+                  <input
+                    type="text"
+                    name="subject"
+                    id="subject"
+                    class="form-control"
+                    placeholder="Subject"
+                  />
+                  <img src="assets/img/icon/chat.svg" alt="" />
+                  <span class="invalid-feedback"></span>
+                </div>
+
+                <!-- Row 3: Message (full width) -->
+                <div class="form-group col-12">
+                  <textarea
+                    name="message"
+                    id="message"
+                    cols="30"
+                    rows="4"
+                    class="form-control"
+                    placeholder="Message"
+                  ></textarea>
+                  <img src="assets/img/icon/chat.svg" alt="" />
+                  <span class="invalid-feedback"></span>
+                </div>
+
+                <!-- Row 4: Send button -->
+                <div class="form-group col-12 mb-0 mt-2">
                   <button
                     type="submit"
                     form="contactForm"
-                    class="th-btn style5 th-radius"
+                    class="th-btn contact-submit-btn"
                   >
                     Send Message <img src="assets/img/icon/plane3.svg" alt="" />
                   </button>
                 </div>
-                <div class="contact-info">
-                  <p class="contact-info_link">
-                    <a href="tel:+9607782081">+960 778 2081</a>
-                  </p>
-                  <div class="contact-info_icon">
-                    <a href="tel:+9607782081"
-                      ><img src="assets/img/icon/call.svg" alt=""
-                    /></a>
-                  </div>
-                </div>
               </div>
-            </div>
+              <p class="form-messages mb-0 mt-3"></p>
+            </form>
           </div>
         </div>
       </div>
