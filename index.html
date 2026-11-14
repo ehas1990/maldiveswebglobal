@@ -338,62 +338,393 @@
         padding: 14px 20px !important;
         border-radius: 100px !important;
       }
-      .category-area {
-        background-color: #eaf4fd;
+/* ==========================================================================
+         Scoped "What We Offer" Section Styles (Glinto "HOW WE WORK" Inspired)
+         ========================================================================== */
+      .glinto-wwo-section {
+        background-color: #f6f9fc !important;
+        position: relative !important;
+        overflow: visible !important;
+        padding: 0 !important;
       }
-      .category-text {
-        padding-left: 15px;
-        padding-right: 15px;
+
+      .glinto-wwo-runway {
+        position: relative;
+        width: 100%;
       }
-      .category-text .box-title a {
-        color: #000000;
+
+      .glinto-wwo-stage {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
+      }
+
+      @media (min-width: 992px) {
+        .glinto-wwo-stage {
+          position: sticky;
+          top: 0;
+          height: 100vh;
+          min-height: 560px;
+          max-height: 880px;
+          overflow: hidden;
+          padding-top: 75px;
+          padding-bottom: 20px;
+        }
+      }
+
+      @media (max-width: 991px) {
+        .glinto-wwo-stage {
+          padding-top: var(--section-space-mobile, 60px);
+          padding-bottom: var(--section-space-mobile, 60px);
+        }
+      }
+
+      /* Header styling */
+      .glinto-wwo-header {
+        margin-bottom: 16px;
+      }
+      @media (max-width: 991px) {
+        .glinto-wwo-header {
+          margin-bottom: 20px;
+        }
+      }
+
+      .glinto-wwo-badge-wrap {
+        margin-bottom: 8px;
+      }
+      .glinto-wwo-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 100%);
+        color: #0284c7;
+        border: 1px solid rgba(49, 140, 231, 0.22);
+        padding: 4px 14px;
+        border-radius: 100px;
+        font-size: 12.5px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        font-family: var(--title-font, "Plus Jakarta Sans", sans-serif);
+      }
+      .glinto-wwo-badge::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #318ce7;
+      }
+
+      .glinto-wwo-title {
+        font-size: 30px;
+        line-height: 1.25;
+        font-weight: 700;
+        color: #0b1422;
+        margin-bottom: 6px;
+        letter-spacing: -0.4px;
+        font-family: var(--title-font, "Plus Jakarta Sans", sans-serif);
+      }
+      @media (max-width: 1199px) {
+        .glinto-wwo-title {
+          font-size: 26px;
+        }
+      }
+      @media (max-width: 767px) {
+        .glinto-wwo-title {
+          font-size: 24px;
+        }
+      }
+
+      .glinto-wwo-desc {
+        font-size: 14px;
+        line-height: 1.5;
+        color: #5a6578;
+        max-width: 660px;
+        margin-bottom: 0;
+      }
+
+      /* Viewport & Track */
+      .glinto-wwo-viewport {
+        width: 100%;
+        position: relative;
+        overflow: visible;
+      }
+
+      .glinto-wwo-track {
+        display: flex;
+        list-style: none;
+        padding: 10px 0 14px 0;
+        margin: 0;
+      }
+
+      @media (min-width: 992px) {
+        .glinto-wwo-track {
+          flex-direction: row;
+          gap: 20px;
+          width: max-content;
+          will-change: transform;
+        }
+      }
+
+      @media (max-width: 991px) {
+        .glinto-wwo-track {
+          flex-direction: column;
+          gap: 16px;
+          width: 100%;
+          padding: 0;
+        }
+      }
+
+      /* Card Item Styling - Full Container Width & Smooth Center Zoom */
+      .glinto-wwo-card {
+        background-color: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 16px;
+        padding: 16px 18px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 0 4px 16px rgba(11, 20, 34, 0.04);
+        position: relative;
+        z-index: 1;
+        transform-origin: center center;
+        transition:
+          transform 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+          box-shadow 0.4s ease,
+          border-color 0.4s ease;
+      }
+
+      /* Desktop: 3 cards fill 100% of viewport/container width */
+      @media (min-width: 992px) {
+        .glinto-wwo-card {
+          width: var(--wwo-card-width, 380px);
+          min-width: var(--wwo-card-width, 380px);
+          max-width: var(--wwo-card-width, 380px);
+        }
+      }
+
+      /* Tablet & Mobile: 100% full width stacked */
+      @media (max-width: 991px) {
+        .glinto-wwo-card {
+          width: 100%;
+          min-width: 100%;
+          max-width: 100%;
+          border-radius: 14px;
+          padding: 15px;
+        }
+      }
+
+      /* Center Card Zoom Effect (Active on the card positioned at viewport center) */
+      @media (min-width: 992px) {
+        .glinto-wwo-card.glinto-card-center {
+          transform: scale(1.045);
+          border-color: rgba(49, 140, 231, 0.45);
+          box-shadow: 0 16px 36px rgba(49, 140, 231, 0.16);
+          z-index: 5;
+        }
+        .glinto-wwo-card.glinto-card-center:hover {
+          transform: scale(1.045) translateY(-3px);
+          box-shadow: 0 20px 40px rgba(49, 140, 231, 0.22);
+        }
+      }
+
+      @media (max-width: 991px) {
+        .glinto-wwo-card.glinto-card-center {
+          border-color: rgba(49, 140, 231, 0.45);
+          box-shadow: 0 10px 26px rgba(49, 140, 231, 0.14);
+          transform: scale(1.015);
+        }
+      }
+
+      .glinto-wwo-card:hover:not(.glinto-card-center) {
+        transform: translateY(-4px);
+        border-color: #318ce7;
+        box-shadow: 0 12px 28px rgba(49, 140, 231, 0.12);
+        z-index: 3;
+      }
+
+      /* Card Header: Number Outline + Title + Badge */
+      .glinto-card-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        margin-bottom: 8px;
+      }
+
+      .glinto-card-head-left {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      /* Outline-style Number Styling (transparent fill with visible stroke) */
+      .glinto-card-num {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent !important;
+        color: transparent !important;
+        -webkit-text-fill-color: transparent !important;
+        -webkit-text-stroke: 1.2px #318ce7;
+        text-stroke: 1.2px #318ce7;
+        font-size: 19px;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -0.5px;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        height: auto;
+        min-width: auto;
+        font-family: var(--title-font, "Plus Jakarta Sans", sans-serif);
+        tabular-nums: true;
+        transition: -webkit-text-stroke-color 0.3s ease;
+      }
+
+      .glinto-wwo-card:hover .glinto-card-num,
+      .glinto-wwo-card.glinto-card-center .glinto-card-num {
+        -webkit-text-stroke-color: #318ce7;
+      }
+
+      .glinto-card-badge {
+        font-size: 11px;
+        font-weight: 700;
+        color: #318ce7;
+        background-color: #f0f7ff;
+        padding: 2px 8px;
+        border-radius: 100px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-family: var(--title-font, "Plus Jakarta Sans", sans-serif);
+      }
+
+      .glinto-card-title {
+        font-size: 16.5px;
+        font-weight: 700;
+        line-height: 1.3;
+        color: #0b1422;
+        margin-bottom: 8px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        font-family: var(--title-font, "Plus Jakarta Sans", sans-serif);
+      }
+      .glinto-card-title a {
+        color: inherit;
+        text-decoration: none;
         transition: color 0.3s ease;
       }
-      .category-text .box-title a:hover,
-      .category-text:hover .box-title a {
+      .glinto-card-title a:hover {
         color: #318ce7;
       }
-      .category-text .th-btn {
-        background-color: #318ce7 !important;
-        color: #ffffff !important;
-        border: none !important;
-        border-radius: 8px !important;
-        padding: 12px 28px !important;
-        font-size: 15px !important;
-        font-weight: 600 !important;
-        display: inline-flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        gap: 8px !important;
-        text-decoration: none !important;
-        box-shadow: 0 4px 14px rgba(49, 140, 231, 0.25) !important;
-        transition: all 0.3s ease !important;
-        margin-top: 10px !important;
+
+      /* Card Image */
+      .glinto-card-media {
+        width: 100%;
+        height: 115px;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 8px;
+        background-color: #e2e8f0;
+        position: relative;
       }
-      .category-text .th-btn:before,
-      .category-text .th-btn:after {
-        display: none !important;
+      .glinto-card-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s ease;
       }
-      .category-text .th-btn i {
-        color: #ffffff !important;
-        font-size: 14px !important;
-        transition: transform 0.3s ease !important;
+      .glinto-wwo-card:hover .glinto-card-media img,
+      .glinto-wwo-card.glinto-card-center .glinto-card-media img {
+        transform: scale(1.05);
       }
-      .category-text .th-btn:hover {
-        background-color: #0b1422 !important;
-        color: #ffffff !important;
-        box-shadow: 0 6px 18px rgba(11, 20, 34, 0.2) !important;
-        transform: translateY(-2px) !important;
+
+      /* Card Description - compact, clamped */
+      .glinto-card-text {
+        font-size: 13px;
+        line-height: 1.45;
+        color: #5a6578;
+        margin-bottom: 8px;
+        min-height: 38px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
       }
-      .category-text .th-btn:hover i {
-        color: #ffffff !important;
-        transform: translateX(3px) !important;
+
+      /* Feature Chips / Tags */
+      .glinto-card-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        margin-bottom: 8px;
+        min-height: 50px;
+        align-content: flex-start;
       }
-      .category-text:hover .th-btn {
-        color: #ffffff !important;
+      .glinto-card-tags span {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 11px;
+        color: #334155;
+        background-color: #f1f5f9;
+        padding: 2px 7px;
+        border-radius: 4px;
+        font-weight: 500;
       }
-      .category-text:hover .th-btn i {
-        color: #ffffff !important;
+      .glinto-card-tags span i {
+        color: #318ce7;
+        font-size: 10px;
+      }
+
+      /* Card Footer / Action Link */
+      .glinto-card-action {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 8px;
+        margin-top: auto;
+        border-top: 1px solid #f1f5f9;
+      }
+      .glinto-card-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12.5px;
+        font-weight: 700;
+        color: #318ce7;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-family: var(--title-font, "Plus Jakarta Sans", sans-serif);
+      }
+      .glinto-card-link i {
+        transition: transform 0.3s ease;
+      }
+      .glinto-card-link:hover {
+        color: #0e2942;
+      }
+      .glinto-card-link:hover i {
+        transform: translateX(4px);
+      }
+
+      /* Horizontal Drag / Scroll Hint */
+      .glinto-scroll-hint {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 12.5px;
+        color: #8898aa;
+        font-weight: 600;
+        font-family: var(--title-font, "Plus Jakarta Sans", sans-serif);
+      }
+      @media (max-width: 991px) {
+        .glinto-scroll-hint {
+          display: none;
+        }
       }
 
       /* Testimonial Active / Inactive Card Styling */
@@ -1129,147 +1460,471 @@
         </div>
       </div>
     </section>
-    <section
-      class="category-area bg-top-center space overflow-hidden"
-      id="servicessec"
-      data-bg-src="assets/img/bg/category_bg_1.png"
-    >
-      <div class="container th-container">
-        <div class="title-area mb-60 text-center">
-          <span class="sub-title text-anime-style-2">What We Offer</span>
-          <h2 class="sec-title text-anime-style-3">
-            Services Designed to Make Your Life Easier
-          </h2>
-        </div>
-        <div
-          class="swiper th-slider categorySlider"
-          id="categorySlider1"
-          data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"3"},"1200":{"slidesPerView":"3"},"1400":{"spaceBetween":45,"slidesPerView":"5"}}}'
-        >
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="category-card single">
-                <div class="box-img global-img">
-                  <img src="assets/img/category/category_1_1.jpg" alt="Image" />
-                </div>
-                <div class="category-text">
-                  <h3 class="box-title">
-                    <a href="#">Enterprise Application Development Solutions</a>
-                  </h3>
-                  <p class="sec-text">
-                    Transforming your vision into powerful, scalable enterprise
-                    solutions.
+    <section class="glinto-wwo-section" id="servicessec">
+      <div class="glinto-wwo-runway" id="glintoWwoRunway">
+        <div class="glinto-wwo-stage" id="glintoWwoStage">
+          <div class="container th-container">
+            <!-- Header matching Glinto "HOW WE WORK" -->
+            <div class="glinto-wwo-header">
+              <div
+                class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-end gap-3"
+              >
+                <div>
+                  <div class="glinto-wwo-badge-wrap">
+                    <span class="glinto-wwo-badge">What We Offer</span>
+                  </div>
+                  <h2 class="glinto-wwo-title">
+                    Solutions Shaped by How Your Business Runs
+                  </h2>
+                  <p class="glinto-wwo-desc">
+                    Every business operates on its own strategy. We study your
+                    operational needs closely and engineer tailored,
+                    high-performance digital platforms that accelerate growth.
                   </p>
-                  <a href="tel:+9607782081" class="th-btn th-icon"
-                    >Know More <i class="fa-light fa-arrow-right-long"></i>
-                  </a>
+                </div>
+                <div class="glinto-scroll-hint">
+                  <span>Scroll to explore</span>
+                  <i class="fa-light fa-arrow-right-long"></i>
                 </div>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="category-card single">
-                <div class="box-img global-img">
-                  <img src="assets/img/category/category_1_2.jpg" alt="Image" />
-                </div>
-                <div class="category-text">
-                  <h3 class="box-title">
-                    <a href="#">Odoo Development</a>
-                  </h3>
-                  <p class="sec-text">
-                    Odoo development refers to the process of customizing,
-                    extending, and building applications on top of the Odoo
-                    platform for business applications, including CRM, ERP, POS
-                    , HR , accounting, inventory and more.
-                  </p>
-                  <a href="tel:+9607782081" class="th-btn th-icon"
-                    >Know More <i class="fa-light fa-arrow-right-long"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="category-card single">
-                <div class="box-img global-img">
-                  <img src="assets/img/category/category_1_3.jpg" alt="Image" />
-                </div>
-                <div class="category-text">
-                  <h3 class="box-title">
-                    <a href="#">Website Development</a>
-                  </h3>
-                  <p class="sec-text">
-                    A successful website does three things: It attracts the
-                    right kinds of visitors. Guides them to the main services or
-                    product you offer.
-                  </p>
 
-                  <a href="tel:+9607782081" class="th-btn th-icon"
-                    >Know More <i class="fa-light fa-arrow-right-long"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="category-card single">
-                <div class="box-img global-img">
-                  <img src="assets/img/category/category_1_4.jpg" alt="Image" />
-                </div>
-                <div class="category-text">
-                  <h3 class="box-title">
-                    <a href="#">Web Application Development</a>
-                  </h3>
-                  <p class="sec-text">
-                    In this world, most computer software applications are web
-                    applications. The usage of web applications is growing day
-                    by day.
-                  </p>
-                  <a href="tel:+9607782081" class="th-btn th-icon"
-                    >Know More <i class="fa-light fa-arrow-right-long"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="category-card single">
-                <div class="box-img global-img">
-                  <img src="assets/img/category/category_1_5.jpg" alt="Image" />
-                </div>
-                <div class="category-text">
-                  <h3 class="box-title">
-                    <a href="#">Enterprise Application Development Solutions</a>
-                  </h3>
-                  <p class="sec-text">
-                    Transforming your vision into powerful, scalable enterprise
-                    solutions.
-                  </p>
-                  <a href="tel:+9607782081" class="th-btn th-icon"
-                    >Know More <i class="fa-light fa-arrow-right-long"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="category-card single">
-                <div class="box-img global-img">
-                  <img src="assets/img/category/category_1_1.jpg" alt="Image" />
-                </div>
-                <div class="category-text">
-                  <h3 class="box-title"><a href="#">Odoo Development</a></h3>
-                  <p class="sec-text">
-                    Odoo development refers to the process of customizing,
-                    extending, and building applications on top of the Odoo
-                    platform for business applications, including CRM, ERP, POS
-                    , HR , accounting, inventory and more.
-                  </p>
-                  <a href="tel:+9607782081" class="th-btn th-icon"
-                    >Know More <i class="fa-light fa-arrow-right-long"></i>
-                  </a>
-                </div>
-              </div>
+            <!-- Viewport and Horizontal Track -->
+            <div class="glinto-wwo-viewport" id="glintoWwoViewport">
+              <ol class="glinto-wwo-track" id="glintoWwoTrack">
+                <!-- Card 1: Enterprise Solutions -->
+                <li class="glinto-wwo-card">
+                  <div>
+                    <div class="glinto-card-head">
+                      <div class="glinto-card-head-left">
+                        <span class="glinto-card-num">01</span>
+                        <span class="glinto-card-badge"
+                          >Enterprise Solutions</span
+                        >
+                      </div>
+                    </div>
+                    <h3 class="glinto-card-title">
+                      <a href="tel:+9607782081"
+                        >Enterprise Application Development</a
+                      >
+                    </h3>
+                    <div class="glinto-card-media">
+                      <img
+                        src="assets/img/category/category_1_1.jpg"
+                        alt="Enterprise Application Development Solutions"
+                      />
+                    </div>
+                    <p class="glinto-card-text">
+                      Transforming your vision into scalable enterprise
+                      architectures built to streamline complex workflows,
+                      enhance agility, and drive enterprise growth.
+                    </p>
+                    <div class="glinto-card-tags">
+                      <span
+                        ><i class="fa-solid fa-circle-check"></i>
+                        Microservices</span
+                      >
+                      <span
+                        ><i class="fa-solid fa-circle-check"></i> Security</span
+                      >
+                      <span
+                        ><i class="fa-solid fa-circle-check"></i> Custom
+                        Workflows</span
+                      >
+                      <span
+                        ><i class="fa-solid fa-circle-check"></i> 24/7
+                        Support</span
+                      >
+                    </div>
+                  </div>
+                  <div class="glinto-card-action">
+                    <a href="tel:+9607782081" class="glinto-card-link">
+                      <span>Know More</span>
+                      <i class="fa-light fa-arrow-right-long"></i>
+                    </a>
+                  </div>
+                </li>
+
+                <!-- Card 2: Odoo Development -->
+                <li class="glinto-wwo-card">
+                  <div>
+                    <div class="glinto-card-head">
+                      <div class="glinto-card-head-left">
+                        <span class="glinto-card-num">02</span>
+                        <span class="glinto-card-badge"
+                          >ERP &amp; Management</span
+                        >
+                      </div>
+                    </div>
+                    <h3 class="glinto-card-title">
+                      <a href="tel:+9607782081">Odoo ERP Customization</a>
+                    </h3>
+                    <div class="glinto-card-media">
+                      <img
+                        src="assets/img/category/category_1_2.jpg"
+                        alt="Odoo Development"
+                      />
+                    </div>
+                    <p class="glinto-card-text">
+                      Customizing and extending full-cycle business applications
+                      on Odoo: CRM, ERP, Point of Sale, HR, automated
+                      accounting, and supply chain.
+                    </p>
+                    <div class="glinto-card-tags">
+                      <span
+                        ><i class="fa-solid fa-circle-check"></i> Custom
+                        Modules</span
+                      >
+                      <span
+                        ><i class="fa-solid fa-circle-check"></i> Accounting
+                        &amp; POS</span
+                      >
+                      <span
+                        ><i class="fa-solid fa-circle-check"></i>
+                        Inventory</span
+                      >
+                      <span
+                        ><i class="fa-solid fa-circle-check"></i> Third-Party
+                        APIs</span
+                      >
+                    </div>
+                  </div>
+                  <div class="glinto-card-action">
+                    <a href="tel:+9607782081" class="glinto-card-link">
+                      <span>Know More</span>
+                      <i class="fa-light fa-arrow-right-long"></i>
+                    </a>
+                  </div>
+                </li>
+
+                <!-- Card 3: Website Development -->
+                <li class="glinto-wwo-card">
+                  <div>
+                    <div class="glinto-card-head">
+                      <div class="glinto-card-head-left">
+                        <span class="glinto-card-num">03</span>
+                        <span class="glinto-card-badge"
+                          >Web Design &amp; Build</span
+                        >
+                      </div>
+                    </div>
+                    <h3 class="glinto-card-title">
+                      <a href="tel:+9607782081">Modern Website Development</a>
+                    </h3>
+                    <div class="glinto-card-media">
+                      <img
+                        src="assets/img/category/category_1_3.jpg"
+                        alt="Website Development"
+                      />
+                    </div>
+                    <p class="glinto-card-text">
+                      Crafting high-converting digital flagships that attract
+                      the right audience, guide users effortlessly to core
+                      services, and establish trust.
+                    </p>
+                    <div class="glinto-card-tags">
+                      <span
+                        ><i class="fa-solid fa-circle-check"></i> Modern
+                        UI/UX</span
+                      >
+                      <span
+                        ><i class="fa-solid fa-circle-check"></i>
+                        Responsive</span
+                      >
+                      <span
+                        ><i class="fa-solid fa-circle-check"></i> SEO
+                        Optimized</span
+                      >
+                      <span
+                        ><i class="fa-solid fa-circle-check"></i> Blazing
+                        Fast</span
+                      >
+                    </div>
+                  </div>
+                  <div class="glinto-card-action">
+                    <a href="tel:+9607782081" class="glinto-card-link">
+                      <span>Know More</span>
+                      <i class="fa-light fa-arrow-right-long"></i>
+                    </a>
+                  </div>
+                </li>
+
+                <!-- Card 4: Web Application Development -->
+                <li class="glinto-wwo-card">
+                  <div>
+                    <div class="glinto-card-head">
+                      <div class="glinto-card-head-left">
+                        <span class="glinto-card-num">04</span>
+                        <span class="glinto-card-badge"
+                          >Cloud Applications</span
+                        >
+                      </div>
+                    </div>
+                    <h3 class="glinto-card-title">
+                      <a href="tel:+9607782081">Web Application Development</a>
+                    </h3>
+                    <div class="glinto-card-media">
+                      <img
+                        src="assets/img/category/category_1_4.jpg"
+                        alt="Web Application Development"
+                      />
+                    </div>
+                    <p class="glinto-card-text">
+                      Engineering dynamic web applications, real-time customer
+                      portals, and progressive web apps delivering
+                      cross-platform power and reliable data access.
+                    </p>
+                    <div class="glinto-card-tags">
+                      <span
+                        ><i class="fa-solid fa-circle-check"></i> Real-time
+                        Cloud</span
+                      >
+                      <span
+                        ><i class="fa-solid fa-circle-check"></i> SPAs &amp;
+                        PWAs</span
+                      >
+                      <span
+                        ><i class="fa-solid fa-circle-check"></i> RBAC
+                        Security</span
+                      >
+                      <span
+                        ><i class="fa-solid fa-circle-check"></i> Scalable
+                        DB</span
+                      >
+                    </div>
+                  </div>
+                  <div class="glinto-card-action">
+                    <a href="tel:+9607782081" class="glinto-card-link">
+                      <span>Know More</span>
+                      <i class="fa-light fa-arrow-right-long"></i>
+                    </a>
+                  </div>
+                </li>
+
+                <!-- Card 5: Enterprise Solutions -->
+                <li class="glinto-wwo-card">
+                  <div>
+                    <div class="glinto-card-head">
+                      <div class="glinto-card-head-left">
+                        <span class="glinto-card-num">05</span>
+                        <span class="glinto-card-badge">Custom Platforms</span>
+                      </div>
+                    </div>
+                    <h3 class="glinto-card-title">
+                      <a href="tel:+9607782081"
+                        >Cloud &amp; DevOps Engineering</a
+                      >
+                    </h3>
+                    <div class="glinto-card-media">
+                      <img
+                        src="assets/img/category/category_1_5.jpg"
+                        alt="Enterprise Application Development Solutions"
+                      />
+                    </div>
+                    <p class="glinto-card-text">
+                      Architecting resilient cloud infrastructures, automated
+                      CI/CD deployment pipelines, and legacy modernization
+                      engineered for high availability.
+                    </p>
+                    <div class="glinto-card-tags">
+                      <span
+                        ><i class="fa-solid fa-circle-check"></i> High
+                        Availability</span
+                      >
+                      <span
+                        ><i class="fa-solid fa-circle-check"></i> Legacy
+                        Modernization</span
+                      >
+                      <span
+                        ><i class="fa-solid fa-circle-check"></i> Cloud
+                        Ready</span
+                      >
+                      <span
+                        ><i class="fa-solid fa-circle-check"></i>
+                        Automation</span
+                      >
+                    </div>
+                  </div>
+                  <div class="glinto-card-action">
+                    <a href="tel:+9607782081" class="glinto-card-link">
+                      <span>Know More</span>
+                      <i class="fa-light fa-arrow-right-long"></i>
+                    </a>
+                  </div>
+                </li>
+              </ol>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <script>
+      (function () {
+        "use strict";
+
+        function initGlintoWwoSection() {
+          if (
+            typeof gsap === "undefined" ||
+            typeof ScrollTrigger === "undefined"
+          ) {
+            setTimeout(initGlintoWwoSection, 50);
+            return;
+          }
+
+          gsap.registerPlugin(ScrollTrigger);
+
+          var runway = document.getElementById("glintoWwoRunway");
+          var stage = document.getElementById("glintoWwoStage");
+          var viewport = document.getElementById("glintoWwoViewport");
+          var track = document.getElementById("glintoWwoTrack");
+
+          if (!runway || !stage || !viewport || !track) return;
+
+          var mm = gsap.matchMedia();
+
+          var cards = Array.from(track.querySelectorAll(".glinto-wwo-card"));
+
+          // Smooth Center Card Zoom Detection Function
+          function updateCenterCard(isDesktop) {
+            if (isDesktop) {
+              var vpRect = viewport.getBoundingClientRect();
+              var vpCenterX = vpRect.left + vpRect.width / 2;
+              var closestCard = null;
+              var minDiff = Infinity;
+
+              cards.forEach(function (card) {
+                var cRect = card.getBoundingClientRect();
+                var cCenterX = cRect.left + cRect.width / 2;
+                var diff = Math.abs(cCenterX - vpCenterX);
+                if (diff < minDiff) {
+                  minDiff = diff;
+                  closestCard = card;
+                }
+              });
+
+              cards.forEach(function (card) {
+                if (card === closestCard) {
+                  card.classList.add("glinto-card-center");
+                } else {
+                  card.classList.remove("glinto-card-center");
+                }
+              });
+            } else {
+              var vpCenterY = window.innerHeight / 2;
+              var closestCard = null;
+              var minDiff = Infinity;
+
+              cards.forEach(function (card) {
+                var cRect = card.getBoundingClientRect();
+                var cCenterY = cRect.top + cRect.height / 2;
+                var diff = Math.abs(cCenterY - vpCenterY);
+                if (diff < minDiff && cRect.top < window.innerHeight && cRect.bottom > 0) {
+                  minDiff = diff;
+                  closestCard = card;
+                }
+              });
+
+              cards.forEach(function (card) {
+                if (card === closestCard) {
+                  card.classList.add("glinto-card-center");
+                } else {
+                  card.classList.remove("glinto-card-center");
+                }
+              });
+            }
+          }
+
+          // Desktop & Laptop (>= 992px): Horizontal Scroll Animation via ScrollTrigger
+          mm.add("(min-width: 992px)", function () {
+            function updateCardWidth() {
+              var w = (viewport.clientWidth - 40) / 3;
+              viewport.style.setProperty("--wwo-card-width", w + "px");
+            }
+            updateCardWidth();
+
+            var ro = new ResizeObserver(function () {
+              updateCardWidth();
+              if (typeof ScrollTrigger !== "undefined") ScrollTrigger.refresh();
+              updateCenterCard(true);
+            });
+            ro.observe(viewport);
+
+            function getDistance() {
+              return Math.max(0, track.scrollWidth - viewport.clientWidth);
+            }
+
+            function updateRunwayHeight() {
+              updateCardWidth();
+              var dist = getDistance();
+              runway.style.height = window.innerHeight + dist * 1.2 + "px";
+            }
+            updateRunwayHeight();
+
+            var hTween = gsap.to(track, {
+              x: function () {
+                return -getDistance();
+              },
+              ease: "none",
+              scrollTrigger: {
+                trigger: runway,
+                start: "top top",
+                end: "bottom bottom",
+                scrub: 0.6,
+                invalidateOnRefresh: true,
+                onRefresh: function () {
+                  updateRunwayHeight();
+                  updateCenterCard(true);
+                },
+                onUpdate: function () {
+                  updateCenterCard(true);
+                },
+              },
+            });
+
+            // Initial center calculation
+            updateCenterCard(true);
+
+            return function () {
+              ro.disconnect();
+              if (hTween.scrollTrigger) hTween.scrollTrigger.kill();
+              hTween.kill();
+              runway.style.height = "";
+              viewport.style.removeProperty("--wwo-card-width");
+              cards.forEach(function (card) {
+                card.classList.remove("glinto-card-center");
+              });
+              gsap.set(track, { clearProps: "all" });
+            };
+          });
+
+          // Mobile & Tablet (< 992px): Natural Vertical Stacking + Scroll Zoom
+          mm.add("(max-width: 991px)", function () {
+            runway.style.height = "auto";
+            viewport.style.removeProperty("--wwo-card-width");
+            gsap.set(track, { clearProps: "all" });
+
+            function onMobileScroll() {
+              updateCenterCard(false);
+            }
+            window.addEventListener("scroll", onMobileScroll, { passive: true });
+            updateCenterCard(false);
+
+            return function () {
+              window.removeEventListener("scroll", onMobileScroll);
+              cards.forEach(function (card) {
+                card.classList.remove("glinto-card-center");
+              });
+            };
+          });
+        }
+
+        if (document.readyState === "complete") {
+          initGlintoWwoSection();
+        } else {
+          window.addEventListener("load", initGlintoWwoSection);
+        }
+      })();
+    </script>
     <section class="testi-area overflow-hidden space" id="testi-sec">
       <div class="container-fluid p-0">
         <div class="title-area mb-20 text-center">
